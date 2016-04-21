@@ -1,2 +1,11 @@
 @charset "UTF-8";
 
+#siteTitle {
+    text-align: center;
+    margin: 0;
+}
+
+.siteTitle {
+    width: 100%;
+    height: 100vh;
+}
