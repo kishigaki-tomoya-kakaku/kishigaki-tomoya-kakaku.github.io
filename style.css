@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 #siteTitle {
+    color: #fff;
+    font-family: 'Mrs Sheppards', cursive;
     text-align: center;
     margin: 0;
 }
@@ -22,8 +24,9 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    background: linear-gradient(to bottom, #a6d900 0%, #ff4454 100%);
+    background: linear-gradient(45deg, #a6d900 0%, #ff4454 100%);
     opacity: 0.5;
+    -webkit-animation: huerotator 3s infinite alternate;
   　animation: huerotator 3s infinite alternate;    
 }
 
