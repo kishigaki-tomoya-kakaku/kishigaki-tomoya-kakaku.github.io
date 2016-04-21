@@ -1,9 +1,13 @@
 @charset "UTF-8";
 
-#siteTitle {
-    color: #fff;
+h1, h2 {
     font-family: 'Mrs Sheppards', cursive;
     text-align: center;
+}
+
+#siteTitle {
+    color: #fff;
+    font-size: 3.5em;
     margin: 0;
 }
 
@@ -40,4 +44,56 @@
     -webkit-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
+}
+
+.thumbnail {
+    width: 12em;
+    height: 12em;
+    margin: 0 auto;
+    border: none;
+}
+
+.thumbnail a {
+    border: 5px solid #ddd;
+    border-radius: 50%;
+    background-image: url(img/1522226_451997948260804_267850747_n.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: block;
+    width: 12em;
+    height: 12em;
+}
+
+.thumbnail a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+.thumbnail a:hover:after {
+    -webkit-animation: rippleSecond 1.5s ease;
+    animation: rippleSecond 1.5s ease;
+}
+
+@-webkit-keyframes ripple {
+    0%{opacity:1;-webkit-transform:scale(1);transform:scale(1);box-shadow: 0 0 0 1px rgba(233,88,91,0);}
+    100%{opacity:0;-webkit-transform:scale(2);transform:scale(2);box-shadow: 0 0 0 2px rgba(233,88,91,1);}
+}
+
+@keyframes ripple {
+    0%{opacity:1;-webkit-transform:scale(1);transform:scale(1);box-shadow: 0 0 0 1px rgba(233,88,91,0);}
+    100%{opacity:0;-webkit-transform:scale(2);transform:scale(2);box-shadow: 0 0 0 2px rgba(233,88,91,1);}
+}
+
+.menu {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 3em;
 }
