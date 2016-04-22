@@ -6,15 +6,19 @@ h1, h2 {
 
 }
 
+.overLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 13em;
+}
+
 #siteTitle {
     color: #fff;
     font-size: 3.5em;
     margin: 0;
-}
-
-.fvBox {
-    width: 100%;
-    height: 100vh;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -29,9 +33,13 @@ h1, h2 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+.fvBox {
+    width: 100%;
+    height: 100vh;
     background: linear-gradient(45deg, #a6d900 0%, #ff4454 100%);
     opacity: 0.5;
-    z-index: 10;
     -webkit-animation: huerotator 3s infinite alternate;
   　animation: huerotator 3s infinite alternate;    
 }
@@ -84,6 +92,9 @@ h1, h2 {
     height: 100%;
 }
 
+#firstView {
+    position: relative;
+}
 
 #prof {
     z-index: 1;
