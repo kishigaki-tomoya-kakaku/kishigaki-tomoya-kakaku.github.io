@@ -3,6 +3,7 @@
 h1, h2 {
     font-family: 'Mrs Sheppards', cursive;
     text-align: center;
+
 }
 
 #siteTitle {
@@ -30,6 +31,7 @@ h1, h2 {
     flex-direction: column;
     background: linear-gradient(45deg, #a6d900 0%, #ff4454 100%);
     opacity: 0.5;
+    z-index: 10;
     -webkit-animation: huerotator 3s infinite alternate;
   　animation: huerotator 3s infinite alternate;    
 }
@@ -78,22 +80,57 @@ h1, h2 {
 }
 
 .thumbnail a:hover:after {
-    -webkit-animation: rippleSecond 1.5s ease;
-    animation: rippleSecond 1.5s ease;
+    width: 12em;
+    height: 12em;
+    margin: 0 auto;
+    background-color: #555;
+    border-radius: 50%;
+    -webkit-animation: scaleout 1.0s infinite ease-in-out;
+    animation: scaleout 1.0s infinite ease-in-out;
 }
 
-@-webkit-keyframes ripple {
-    0%{opacity:1;-webkit-transform:scale(1);transform:scale(1);box-shadow: 0 0 0 1px rgba(233,88,91,0);}
-    100%{opacity:0;-webkit-transform:scale(2);transform:scale(2);box-shadow: 0 0 0 2px rgba(233,88,91,1);}
+@-webkit-keyframes scaleout {
+    0% { -webkit-transform: scale(0.0) }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
 }
 
-@keyframes ripple {
-    0%{opacity:1;-webkit-transform:scale(1);transform:scale(1);box-shadow: 0 0 0 1px rgba(233,88,91,0);}
-    100%{opacity:0;-webkit-transform:scale(2);transform:scale(2);box-shadow: 0 0 0 2px rgba(233,88,91,1);}
+@keyframes scaleout {
+    0% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    100% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
 }
 
 .menu {
-    margin-top: 1.5em;
-    margin-bottom: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
     font-size: 3em;
 }
+
+.videoContainer {
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+}
+
+.videoContainer video {
+    height: 100%;
+}
+
+
+#prof {
+    z-index: 1;
+    background-color: #fff;
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
