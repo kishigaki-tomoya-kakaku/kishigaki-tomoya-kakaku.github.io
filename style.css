@@ -221,7 +221,7 @@ h1, h2 {
 }
 
 .heighter {
-    height: 10em
+    height: 15em
 }
 
 .infoBox {
@@ -255,8 +255,8 @@ h1, h2 {
     flex-direction: row;
     font-size: 2em;
     color: #fff;
-    padding-top: 1.8em;
-    padding-bottom: 1.8em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 .bigNav {
